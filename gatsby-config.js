@@ -19,7 +19,7 @@ module.exports = {
             tableName: `Projekt`,
             tableView: `Programmeringsvy`,
 			defaultValues: [`KUND`,`Plats`,`KONTAKTPERSON`,`Projektansvarig`,`Personalbokning`,`Bokat`,`Omkostnader`,`ANTECKNINGAR`,`BILAGOR`,`Yearly`],
-            mapping: { 'Personalbokning': `array`, `Bokningsrader`:`array`  },
+            mapping: { 'Personalbokning': `array` `Bokningsrader`:`array`  },
 			tableLinks: [`Plats`,`Bokat`,`Projektansvarig`,`Personalbokning`,`KONTAKTPERSON`]
           },
 		  {
