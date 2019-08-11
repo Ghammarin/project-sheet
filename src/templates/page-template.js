@@ -9,11 +9,6 @@ export default ({ data }) => (
 		</main>
 	<p>Projektansvarig: {data.airtable.data.Projektansvarig[0].data.Namn}</p>
 	
-	<h5>Personal bokad:</h5>
-	
-		<ul>{data.airtable.data.Personalbokning.map((rad, i) =>(
-		<li key={i}>{data.airtable.data.Personalbokning[i].data.Bokad_personal[0].data.Namn}</li>
-		))}</ul>
 	
   </Layout>
 )
