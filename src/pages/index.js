@@ -1,21 +1,39 @@
 import React from "react"
-import { Link } from "gatsby"
+import { Link, graphql } from "gatsby";
+//(import Airtable from "airtable";)
 
 import Layout from "../components/layout"
-import Image from "../components/image"
-import SEO from "../components/seo"
 
-const IndexPage = () => (
+const IndexPage = ({ data }) => (
   <Layout>
-    <SEO title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-    </div>
-    <Link to="/page-2/">Go to page 2</Link>
+  <h3>Aktuella projekt</h3>
+  {data.allAirtable.edges.map((edge, i) => (
+    <p><Link to={edge.node.data.PROJEKTNAMN} key={i} >
+		{edge.node.data.projekt}
+	</Link></p>
+    )
+	)
+  }
   </Layout>
 )
+
+
+// query airtable for the Title and Path of each record,
+// filtering for only records in the Sections table.
+export const query = graphql`
+  {
+    allAirtable(filter: { table: { eq: "Projekt" } }) {
+      edges {
+        node {
+          data {
+            projekt
+			PROJEKTNAMN
+          }
+        }
+      }
+    }
+  }
+`
+
 
 export default IndexPage
