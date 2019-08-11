@@ -8,6 +8,7 @@ export default ({ data }) => (
         <h3>{data.airtable.data.projekt}</h3><hr/>
 		</main>
 	<p>Projektansvarig: {data.airtable.data.Projektansvarig[0].data.Namn}</p>
+	<p>Projektansvarig: {data.airtable.data.Plats[0].data.Platsnamn}</p>
 	
   </Layout>
 )
