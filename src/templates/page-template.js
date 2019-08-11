@@ -7,6 +7,7 @@ export default ({ data }) => (
   <main>
         <h3>{data.airtable.data.projekt}</h3><hr/>
 		</main>
+	<section>
 	<p>Projektansvarig: {data.airtable.data.Projektansvarig[0].data.Namn}</p>
 			<h5>Personal bokad:</h5>
 	
