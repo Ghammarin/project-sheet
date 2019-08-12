@@ -18,6 +18,7 @@ export default ({ data }) => (
 		<ul>{data.airtable.data.Bokat.map((rad, i) =>(
 		<li key={i}>{data.airtable.data.Bokat[i].data.Bokad_utrustning}</li>
 		))}</ul>
+		<p>{data.airtable.data.Bokat[0].data.Kommentar}</p>
 		</section>
 		<aside>
 		<h5>Kund:</h5>
@@ -51,6 +52,7 @@ export const query = graphql`
 		Bokat{
 			data{
 				Bokad_utrustning
+				Kommentar
 			}
 		}
 		Projektansvarig{
