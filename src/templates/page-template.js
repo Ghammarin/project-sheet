@@ -3,8 +3,7 @@ import { graphql } from 'gatsby'
 import Layout from '../components/layout'
 
 export default ({ data }) => (
-	const post = data.airtable.data
-	return(
+	var post = data.airtable.data
   <Layout>
   <main>
         <h3>{post.projekt}</h3><hr/>
@@ -36,7 +35,7 @@ export default ({ data }) => (
 	
   </Layout>
 )
-)
+
 
 
 
