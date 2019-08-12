@@ -4,6 +4,7 @@ import Layout from '../components/layout'
 
 export default ({ data }) => (
 	const post = data.airtable.data
+	return(
   <Layout>
   <main>
         <h3>{post.projekt}</h3><hr/>
@@ -34,6 +35,7 @@ export default ({ data }) => (
 		</aside>
 	
   </Layout>
+)
 )
 
 
