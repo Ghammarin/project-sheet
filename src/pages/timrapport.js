@@ -15,7 +15,7 @@ class Contact extends React.component {
 
   handleChange = e => this.setState({ [e.target.name]: e.target.value})
 
-  render() {
+  
     export default ({data}) => (
       <form>
         <label>
@@ -29,5 +29,5 @@ class Contact extends React.component {
         <button type="submit">Submit</button>
       </form>
     )
-  }
+  
 }
