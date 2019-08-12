@@ -22,7 +22,7 @@ export default ({ data }) => (
 		<p>{data.airtable.data.ANTECKNINGAR}</p>
 		</section>
 		<aside>
-		<h5>Kund:</h5>
+		<h5>Kontaktperson hos kund:</h5>
 		<div>{data.airtable.data.KONTAKTPERSON.map((person, i) =>(
 			<div key={i}>
 				<p>{data.airtable.data.KONTAKTPERSON[i].data.Namn}</p>
