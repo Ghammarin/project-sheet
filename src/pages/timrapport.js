@@ -13,9 +13,11 @@ class Contact extends React.Component {
     e.preventDefault();
   }
 
-  handleChange = e => this.setState({ [e.target.name]: e.target.value})
+  handleChange = e => {
+	  this.setState({ [e.target.name]: e.target.value})
+	}
 
-  
+  }
     export default ({data}) => (
       <form>
         <label>
@@ -30,4 +32,4 @@ class Contact extends React.Component {
       </form>
     )
   
-}
+
