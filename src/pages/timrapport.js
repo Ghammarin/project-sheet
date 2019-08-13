@@ -1,7 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
 
-class Contact extends React.component {
+class Contact extends React.Component {
   constructor(props) {
     super(props)
     this.state = {}
