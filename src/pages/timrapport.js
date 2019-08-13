@@ -30,6 +30,6 @@ class Contact extends React.Component {
         </label>
         <button type="submit">Submit</button>
       </form>
-    )
+    );
   
 }
