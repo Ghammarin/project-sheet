@@ -17,7 +17,7 @@ class Contact extends React.Component {
 	  this.setState({ [e.target.name]: e.target.value})
 	}
 
-  }
+  
     export default ({data}) => (
       <form>
         <label>
@@ -32,4 +32,4 @@ class Contact extends React.Component {
       </form>
     )
   
-
+}
