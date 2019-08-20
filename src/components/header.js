@@ -5,7 +5,8 @@ import React from "react"
 const Header = ({ siteTitle }) => (
   <header
     style={{
-      background: `rebeccapurple`,
+      background: `grey`,
+      background-image: url("../src/images/SoundLevel-logo.jpg"),
       marginBottom: `1.45rem`,
     }}
   >
