@@ -1,12 +1,13 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
+import image from "..src/images/SoundLevel-logo.jpg"
 
 const Header = ({ siteTitle }) => (
   <header
     style={{
       background: `grey`,
-      background-image: url("../src/images/SoundLevel-logo.jpg"),
+      background-image: url(${image}),
       marginBottom: `1.45rem`,
     }}
   >
