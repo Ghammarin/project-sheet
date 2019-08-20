@@ -21,17 +21,17 @@ summary {
   display: block;
 }
 main {
-	margin-left: 3%;
+	margin-left: 2%;
 }
 section{
 	display: block;
 	float: left;
-	margin-left: 3%;
+	margin-left: 2%;
 }
 aside{
 	display: block;
-	float: right;
-	width: 35%;
+	float: left;
+	width: 45%;
 }
 	
 audio,
