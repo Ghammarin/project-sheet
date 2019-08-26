@@ -16,7 +16,7 @@ export default ({ data }) => (
 		))}</ul>
 		<h5>Packlista!</h5>
 		<ul>{data.airtable.data.Bokat.map((rad, i) =>(
-		<li key={i}>{data.airtable.data.Bokat[i].data.Bokad_utrustning}</li>
+		<li key={i}>{data.airtable.data.Bokat[i].data.Inventarielista.data.Namn}</li>
 		))}</ul>
 		<p>{data.airtable.data.Bokat[0].data.Kommentar}</p>
 		<p>{data.airtable.data.ANTECKNINGAR}</p>
@@ -39,10 +39,9 @@ export const query = graphql`
   query GetPage($Path: String!) {
     airtable(table: { eq: "Projekt" }, data: { PROJEKTNAMN: { eq: $Path } }) {
       data {
-        projekt
+      		projekt
 		PROJEKTNAMN
-        ANTECKNINGAR
-
+       		ANTECKNINGAR
 		Plats{
 			data{
 				Platsnamn
@@ -51,34 +50,42 @@ export const query = graphql`
 		Bokat{
 			data{
 				Bokad_utrustning
+				
 				Kommentar
 			}
 		}
 		Projektansvarig{
 			data{
 				Namn
-    }
-  }
-  	Personalbokning{
+    			}
+  		}
+	  	Personalbokning{
 			data{
 				Bokad_personal{
 					data{
 						Namn
 						Starttid(formatString: "DD/MM HH:mm")
 						Sluttid(formatString: "DD/MM HH:mm")
-    }
-  }
-}
-	}
+    					}
+  				}
+			}
+		}
+		Inventarielista{
+			data{
+				Namn
+				Produktnamn
+				Description
+			}
+		}
 		KONTAKTPERSON{
 			data{
 				Namn
 				Telefonnummer
 				Mailadress
-    }
-  }
-  }
-	}
-  }
+    			}
+  		}
+  	}
+ }
+}
   
 `
