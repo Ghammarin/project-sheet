@@ -60,6 +60,14 @@ module.exports = {
 //            mapping: { 'ANTECKNINGAR': `text/markdown` },
 			tableLinks: [`Projekt`]
           },
+				  {
+            baseId: `appVntpV9Sejz9kjg`,
+            tableName: `Inventarielista`,
+            tableView: `All`,
+			defaultValues: [`Namn`,`Produktnamn`,`Description`],
+//            mapping: { 'ANTECKNINGAR': `text/markdown` },
+			tableLinks: [`Projekt`]
+          },
 
          ],
   }
