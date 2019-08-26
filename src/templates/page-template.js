@@ -70,13 +70,6 @@ export const query = graphql`
   				}
 			}
 		}
-		Inventarielista{
-			data{
-				Namn
-				Produktnamn
-				Description
-			}
-		}
 		KONTAKTPERSON{
 			data{
 				Namn
