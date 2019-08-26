@@ -36,7 +36,7 @@ module.exports = {
             tableView: `Programmeringsvy`,
 			defaultValues: [`F_rdiga_kit`,`Inventarielista`,`Kommentar`,`Antal_bokat`,`Pris`,`Bokad_utrustning`,`Klart?`,`Antal_i_kit`],
 //            mapping: { 'ANTECKNINGAR': `text/markdown` },
-			tableLinks: [`Projekt`]
+			tableLinks: [`Projekt`, `Inventarielista`]
           },
 		  {
             baseId: `appVntpV9Sejz9kjg`,
