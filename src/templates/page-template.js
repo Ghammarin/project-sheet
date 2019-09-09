@@ -19,7 +19,6 @@ export default ({ data }) => (
 		<li key={i}>{data.airtable.data.Bokat[i].data.Bokad_utrustning[0].data.Bokningsrad}</li>
 		))}</ul>
 		<p>{data.airtable.data.Bokat[0].data.Kommentar}</p>
-		<p>{data.airtable.data.ANTECKNINGAR}</p>
 		</section>
 		<aside>
 		<h5>Kontaktperson hos kund:</h5>
