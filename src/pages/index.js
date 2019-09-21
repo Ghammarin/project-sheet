@@ -22,7 +22,7 @@ const IndexPage = ({ data }) => (
 // filtering for only records in the Sections table.
 export const query = graphql`
   {
-    allAirtable(filter: { table: { eq: "Projekt" field: "projekt", direction: "desc"} }) {
+    allAirtable(filter: { table: { eq: "Projekt"} field: {"projekt", direction: "desc"} }) {
       edges {
         node {
           data {
