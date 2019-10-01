@@ -39,7 +39,7 @@ export default ({ data }) => (
 
 export const query = graphql`
   query GetPage($Path: String!) {
-    airtable(table: { eq: "Projekt" }, data: { PROJEKTNAMN: { eq: $Path } }||"") {
+    airtable(table: { eq: "Projekt" }, data: { PROJEKTNAMN: { eq: $Path } }) {
       data {
       		projekt
 		PROJEKTNAMN
