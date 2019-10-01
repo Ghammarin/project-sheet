@@ -33,7 +33,7 @@ module.exports = {
 		  {
             baseId: `appVntpV9Sejz9kjg`,
             tableName: `Bokningsrader`,
-            tableView: `Gabriella`,
+            tableView: `Programmeringsvy`,
 			defaultValues: [`F_rdiga_kit`,`Inventarielista`,`Kommentar`,`Antal_bokat`,`Pris`,`Bokad_utrustning`,`Klart?`,`Antal_i_kit`],
 //            mapping: { 'ANTECKNINGAR': `text/markdown` },
 			tableLinks: [`Projekt`, `Inventarielista`]
