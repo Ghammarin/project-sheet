@@ -9,7 +9,7 @@ const IndexPage = ({ data }) => (
   <h3>Aktuella projekt</h3>
   {data.allAirtable.edges.map((edge, i) => (
     <p><Link to={edge.node.data.PROJEKTNAMN} key={i} >
-		{edge.node.data.projekt||""}
+		{edge.node.data.projekt||null}
 	</Link></p>
     )
 	)
