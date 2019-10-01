@@ -69,11 +69,6 @@ export const query = graphql`
   		}
 	  	Personalbokning{
 			data{
-				Bokad_personal{
-					data{
-						Namn
-    					}
-  				}
 			}
 		}
 		KONTAKTPERSON{
