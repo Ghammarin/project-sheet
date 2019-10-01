@@ -72,8 +72,6 @@ export const query = graphql`
 				Bokad_personal{
 					data{
 						Namn
-						Starttid(formatString: "DD/MM HH:mm")
-						Sluttid(formatString: "DD/MM HH:mm")
     					}
   				}
 			}
