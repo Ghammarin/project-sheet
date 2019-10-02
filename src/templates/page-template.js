@@ -5,7 +5,7 @@ import Layout from '../components/layout'
 export default ({ data }) => (
   <Layout>
   <main>
-        <h3>{data.airtable.data.projekt||""}</h3><hr/>
+        <h3>{data.airtable.data.projekt}</h3><hr/>
 		</main>
 	<section>
 	<p>Projektansvarig: {data.airtable.data.Projektansvarig[0].data.Namn}</p>
