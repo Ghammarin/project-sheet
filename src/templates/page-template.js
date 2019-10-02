@@ -11,8 +11,7 @@ export default ({ data }) => (
 	<p>Projektansvarig: {data.airtable.data.Projektansvarig[0].data.Namn}</p>
 			<h5>Personal bokad:</h5>
 			
-			const personal = this.props.data.airtable.data.Personalbokning ||[]
-		<ul>{personal.map((rad, i) =>(
+		<ul>{(data.airtable.data.Personalbokning||[]).map((rad, i) =>(
 		<li key={i}>{data.airtable.data.Personalbokning[i].data.Bokad_personal[0].data.Namn||""}</li>
 		))||""}</ul>
 		<h5>Packlista!</h5>
