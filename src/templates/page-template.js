@@ -15,7 +15,7 @@ export default ({ data }) => (
 		<li key={i}>{data.airtable.data.Personalbokning[i].data.Bokad_personal[0].data.Namn||""}</li>
 		))||""}</ul>
 		<h5>Packlista!</h5>
-		<ul>{data.airtable.data.Bokat.map((rad, i) =>(
+		<ul>{(data.airtable.data.Bokat||[]).map((rad, i) =>(
 		<li key={i}>{data.airtable.data.Bokat[i].data.Bokad_utrustning}</li>
 		))}</ul>
 		<p>{data.airtable.data.Bokat[0].data.Kommentar}</p>
