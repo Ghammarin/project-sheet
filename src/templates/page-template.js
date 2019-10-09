@@ -24,9 +24,9 @@ export default ({ data }) => (
 			<ul>{(data.airtable.data.Personalbokning||[]).map((rad, i) =>(
 				<li key={i}>{data.airtable.data.Personalbokning[i].data.Bokad_personal[0].data.Namn||""}</li>			
 			))}</ul>
-			
+			<h5>Starttid:</h5>
 			<ul>{(data.airtable.data.Personalbokning||[]).map((rad, i) =>(
-				<li key={i}>{data.airtable.data.Personalbokning[i].data.Bokad_personal[0].data.Starttid||""}</li>			
+				<li key={i}>{data.airtable.data.Personalbokning[i].data.Starttid[0].data.Startt||""}</li>			
 			))||""}</ul>
 			
 			<h5>Packlista!</h5>
@@ -87,6 +87,10 @@ export const query = graphql`
 						Sluttid(formatString: "DD/MM HH:mm")
     					}
   				}
+				Starttid
+					data{
+					Start(formatString: "DD/MM HH:mm")
+					}
 			}
 		}
 		KONTAKTPERSON{
