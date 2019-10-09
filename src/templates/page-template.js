@@ -7,17 +7,29 @@ export default ({ data }) => (
   <main>
         <h3>{data.airtable.data.projekt}</h3><hr/>
 		</main>
+		<aside>
+		<h5>Kontaktperson hos kund:</h5>
+		<div>{(data.airtable.data.KONTAKTPERSON||[]).map((person, i) =>(
+			<div key={i}>
+				<p>{data.airtable.data.KONTAKTPERSON[i].data.Namn}</p>
+				<p>{data.airtable.data.KONTAKTPERSON[i].data.Telefonnummer}</p>
+				<small>{data.airtable.data.KONTAKTPERSON[i].data.Mailadress}</small>
+			</div> 
+		))}</div>
+		</aside>
 		<section>
 			<p>Projektansvarig: {data.airtable.data.Projektansvarig[0].data.Namn}</p>
-				<h5>Personal bokad:</h5>
+			<h5>Personal bokad:</h5>
 				
 			<ul>{(data.airtable.data.Personalbokning||[]).map((rad, i) =>(
 			<li key={i}>{data.airtable.data.Personalbokning[i].data.Bokad_personal[0].data.Namn||""}</li>
 			))||""}</ul>
+			
 			<h5>Packlista!</h5>
 			<ul>{(data.airtable.data.Bokat||[]).map((rad, i) =>(
 			<li key={i}>{data.airtable.data.Bokat[i].data.Bokad_utrustning}</li>
-			))}</ul>				
+			))}</ul>	
+			
 			<h5>Kommentar</h5>
 			<ul>{(data.airtable.data.Bokat||[]).map((rad, i) =>(
 			<li key={i}>{data.airtable.data.Bokat[i].data.Kommentar}</li>
@@ -39,7 +51,6 @@ export default ({ data }) => (
 			</div> 
 		))}</div>
 		</aside>
-
 
   </Layout>
 )
