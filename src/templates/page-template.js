@@ -7,7 +7,9 @@ export default ({ data }) => (
   <main>
         <h3>{data.airtable.data.projekt}</h3><hr/>
 		</main>
-		<aside>
+
+		<section>
+				<aside>
 		<h5>Kontaktperson hos kund:</h5>
 		<div>{(data.airtable.data.KONTAKTPERSON||[]).map((person, i) =>(
 			<div key={i}>
@@ -17,7 +19,6 @@ export default ({ data }) => (
 			</div> 
 		))}</div>
 		</aside>
-		<section>
 			<p>Projektansvarig: {data.airtable.data.Projektansvarig[0].data.Namn}</p>
 			<h5>Personal bokad:</h5>
 				
