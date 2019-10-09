@@ -7,21 +7,27 @@ export default ({ data }) => (
   <main>
         <h3>{data.airtable.data.projekt}</h3><hr/>
 		</main>
-	<section>
-	<p>Projektansvarig: {data.airtable.data.Projektansvarig[0].data.Namn}</p>
-			<h5>Personal bokad:</h5>
+		<section>
+			<p>Projektansvarig: {data.airtable.data.Projektansvarig[0].data.Namn}</p>
+				<h5>Personal bokad:</h5>
+				
+			<ul>{(data.airtable.data.Personalbokning||[]).map((rad, i) =>(
+			<li key={i}>{data.airtable.data.Personalbokning[i].data.Bokad_personal[0].data.Namn||""}</li>
+			))||""}</ul>
+			<h5>Packlista!</h5>
+			<ul>{(data.airtable.data.Bokat||[]).map((rad, i) =>(
+			<li key={i}>{data.airtable.data.Bokat[i].data.Bokad_utrustning}</li>
+			))}</ul>				
+			<h5>Kommentar</h5>
+			<ul>{(data.airtable.data.Bokat||[]).map((rad, i) =>(
+			<li key={i}>{data.airtable.data.Bokat[i].data.Kommentar}</li>
+			))}</ul>
+
+			<div>
+			<h5>Anteckningar</h5>
+				<p>{data.airtable.data.ANTECKNINGAR}</p>
+			</div>
 			
-		<ul>{(data.airtable.data.Personalbokning||[]).map((rad, i) =>(
-		<li key={i}>{data.airtable.data.Personalbokning[i].data.Bokad_personal[0].data.Namn||""}</li>
-		))||""}</ul>
-		<h5>Packlista!</h5>
-		<ul>{(data.airtable.data.Bokat||[]).map((rad, i) =>(
-		<li key={i}>{data.airtable.data.Bokat[i].data.Bokad_utrustning}</li>
-		))}</ul>				
-		<h5>Kommentar</h5>
-		<ul>{(data.airtable.data.Bokat||[]).map((rad, i) =>(
-		<li key={i}>{data.airtable.data.Bokat[i].data.Kommentar}</li>
-		))}</ul>	
 		</section>
 		<aside>
 		<h5>Kontaktperson hos kund:</h5>
@@ -33,9 +39,7 @@ export default ({ data }) => (
 			</div> 
 		))}</div>
 		</aside>
-			<div>
-				<p>{data.airtable.data.ANTECKNINGAR}</p>
-			</div>
+
 
   </Layout>
 )
