@@ -7,22 +7,9 @@ export default ({ data }) => (
   <main>
         <h3>{data.airtable.data.projekt}</h3><hr/>
 		</main>
-	<section>
-	<p>Projektansvarig: {data.airtable.data.Projektansvarig[0].data.Namn}</p>
-			<h5>Personal bokad:</h5>
-			
-		<ul>{(data.airtable.data.Personalbokning||[]).map((rad, i) =>(
-		<li key={i}>{data.airtable.data.Personalbokning[i].data.Bokad_personal[0].data.Namn||""}</li>
-		))||""}</ul>
-		<h5>Packlista!</h5>
-		<ul>{(data.airtable.data.Bokat||[]).map((rad, i) =>(
-		<li key={i}>{data.airtable.data.Bokat[i].data.Bokad_utrustning}</li>
-		))}</ul>
-		<ul>{(data.airtable.data.Bokat||[]).map((rad, i) =>(
-		<li key={i}>{data.airtable.data.Bokat[i].data.Kommentar}</li>
-		))}</ul>
-		</section>
-		<aside>
+
+		<section>
+				<aside>
 		<h5>Kontaktperson hos kund:</h5>
 		<div>{(data.airtable.data.KONTAKTPERSON||[]).map((person, i) =>(
 			<div key={i}>
@@ -32,10 +19,31 @@ export default ({ data }) => (
 			</div> 
 		))}</div>
 		</aside>
+			<p>Projektansvarig: {data.airtable.data.Projektansvarig[0].data.Namn}</p>
+			<h5>Personal bokad:</h5>
+				
+			<ul>{(data.airtable.data.Personalbokning||[]).map((rad, i) =>(
+				<div id="personal">
+				<li key={i}>{data.airtable.data.Personalbokning[i].data.Bokad_personal[0].data.Namn}</li>
+				</div>				
+			))}</ul>
+			
+			<h5>Packlista!</h5>
+			<ul>{(data.airtable.data.Bokat||[]).map((rad, i) =>(
+			<li key={i}>{data.airtable.data.Bokat[i].data.Bokad_utrustning}</li>
+			))}</ul>	
+			
+			<h5>Kommentar</h5>
+			<ul>{(data.airtable.data.Bokat||[]).map((rad, i) =>(
+			<li key={i}>{data.airtable.data.Bokat[i].data.Kommentar}</li>
+			))}</ul>
+
 			<div>
+			<h5>Anteckningar</h5>
 				<p>{data.airtable.data.ANTECKNINGAR}</p>
 			</div>
-	
+			
+		</section>
   </Layout>
 )
 
@@ -92,3 +100,5 @@ export const query = graphql`
 }
   
 `
+
+
