@@ -31,7 +31,8 @@ section{
 aside{
 	display: block;
 	float: right;
-	width: 35%;
+	width: 45%;
+	margin-left: 15%;
 }
 comment{
 	display: block;
