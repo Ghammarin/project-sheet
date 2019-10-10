@@ -37,13 +37,14 @@ export default ({ data }) => (
 			<ul>{(data.airtable.data.Bokat||[]).map((rad, i) =>(
 			<li key={i}>{data.airtable.data.Bokat[i].data.Kommentar}</li>
 			))}</ul>
-
+		</section>
+		<comment>
 			<div>
 			<h5>Anteckningar</h5>
 				<p>{data.airtable.data.ANTECKNINGAR}</p>
 			</div>
-			
-		</section>
+		</comment>	
+		
   </Layout>
 )
 
