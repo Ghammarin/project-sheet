@@ -41,6 +41,8 @@ export default ({ data }) => (
 		</section>
 		<comment>
 			<div>
+			<h5>Prylar</h5>
+				<p>{data.airtable.data.PRYLAR}</p>
 			<h5>Anteckningar</h5>
 				<p>{data.airtable.data.ANTECKNINGAR}</p>
 			</div>
@@ -55,6 +57,7 @@ export const query = graphql`
       data {
       		projekt
 		PROJEKTNAMN
+		PRYLAR
        		ANTECKNINGAR
 		Plats{
 			data{
