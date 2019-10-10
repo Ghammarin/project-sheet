@@ -33,7 +33,12 @@ aside{
 	float: right;
 	width: 35%;
 }
-	
+comment{
+	display: block;
+	float: right;
+	width: 100%;
+}
+
 audio,
 canvas,
 progress,
