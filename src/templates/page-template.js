@@ -25,7 +25,7 @@ export default ({ data }) => (
 				
 			<ul>{(data.airtable.data.Personalbokning||[]).map((rad, i) =>(
 				<div id="personal">
-				<li key={i}>{data.airtable.data.Personalbokning[i].data.Bokad_personal[0].data.Namn}</li>
+				<li key={i}>{data.airtable.data.Personalbokning[i].data.Bokad_personal[0].data.Namn}" - "{data.airtable.data..Personalbokning[i].data.Bokad_personal[0].data.Namn.Starttid}" - "{data.airtable.data..Personalbokning[i].data.Bokad_personal[0].data.Namn.Sluttid}</li>
 				</div>				
 			))}</ul>
 			
