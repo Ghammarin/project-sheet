@@ -19,7 +19,8 @@ export default ({ data }) => (
 			</div> 
 		))}</div>
 		</aside>
-			<p>Projektansvarig: {data.airtable.data.Projektansvarig[0].data.Namn}</p>
+			<h5>Projektansvarig:</h5>
+			<small>{data.airtable.data.Projektansvarig[0].data.Namn}</small>
 			<h5>Personal bokad:</h5>
 				
 			<ul>{(data.airtable.data.Personalbokning||[]).map((rad, i) =>(
