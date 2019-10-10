@@ -24,7 +24,7 @@ main {
 	margin-left: 2%;
 }
 section{
-	display: block;
+	display: inline-block;
 	float: left;
 	margin-left: 2%;
 }
@@ -38,6 +38,7 @@ comment{
 	display: block;
 	float: right;
 	width: 100%;
+	margin-left: 2%;
 }
 
 audio,
