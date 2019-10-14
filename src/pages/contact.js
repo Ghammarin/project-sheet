@@ -23,7 +23,7 @@ class Contact extends React.component {
   handleChange = e => this.setState({ [e.target.name]: e.target.value})
 
   render() {
-    return() (
+    return (
       <form>
         <label>
           Name
