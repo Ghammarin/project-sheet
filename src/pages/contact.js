@@ -1,3 +1,5 @@
+import React from "react"
+
 class Contact extends React.component {
   constructor(props) {
     super(props)
