@@ -38,3 +38,6 @@ class Contact extends React.component {
     )
   }
 }
+
+
+export default ContactPage
