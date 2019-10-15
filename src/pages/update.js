@@ -7,13 +7,13 @@ import Layout from "../components/layout"
 const UpdatePage = ({ data }) => (
   <Layout>
   <h3>Uppdatera</h3>
-  
+  <select>
 	  {data.allAirtable.edges.map((edge, i) => (
-	  <select>
-		<option value="{edge.node.data.PROJEKTNAMN}key={i}">{edge.node.data.PROJEKTNAMN}key={i}</option>
 	  
-	</select>
+		<option value={edge.node.data.PROJEKTNAMN}key={i}>{edge.node.data.PROJEKTNAMN}key={i}</option>	  
+	
     )
+	</select>
 	)
   }
   </Layout>
