@@ -1,4 +1,3 @@
-
 import React from "react"
 import { Link, graphql } from "gatsby";
 //(import Airtable from "airtable";)
@@ -105,6 +104,4 @@ export const query = graphql`
     }
   }
 `
-
-
 export default UpdatePage
