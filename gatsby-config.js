@@ -33,7 +33,7 @@ module.exports = {
             baseId: `appVntpV9Sejz9kjg`,
             tableName: `Projekt`,
             tableView: `Programmeringsvy`,
-			defaultValues: [`KUND`,`Plats`,`KONTAKTPERSON`,`Projektansvarig`,`Personalbokning`,`Bokat`,`Omkostnader`,`ANTECKNINGAR`,`BILAGOR`,`Yearly`],
+			defaultValues: [`KUND`,`Plats`,`KONTAKTPERSON`,`Projektansvarig`,`Personalbokning`,`Bokat`,`Omkostnader`,`ANTECKNINGAR`,`BILAGOR`,`Yearly`,`Kommentar`],
             mapping: { 'Bokat': `array`  },
 			tableLinks: [`Plats`,`Bokat`,`Projektansvarig`,`Personalbokning`,`KONTAKTPERSON`]
           },
