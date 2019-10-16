@@ -44,6 +44,11 @@ export default ({ data }) => (
 			</div>
 			
 		</section
+		
+		<form onsubmit="addComment()">
+		  Skriv kommentar: <input type="text">
+		  <input type="submit">
+		</form>
   </Layout>
   
   <script>
@@ -122,11 +127,6 @@ export const query = graphql`
 				Namn
 				Telefonnummer
 				Mailadress
-    			}
-  		}
-		Kommentar{
-			data{
-				Kommentarer
     			}
   		}
   	}
