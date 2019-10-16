@@ -1,4 +1,8 @@
 import React from "react"
+import { Link, graphql } from "gatsby";
+//(import Airtable from "airtable";)
+
+import Layout from "../components/layout"
 
 class Comment extends React.component {
   constructor(props) {
