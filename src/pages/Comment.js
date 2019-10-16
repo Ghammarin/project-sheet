@@ -1,3 +1,4 @@
+import React from "react"
 
 class Comment extends React.component {
   constructor(props) {
@@ -22,7 +23,7 @@ class Comment extends React.component {
   handleChange = e => this.setState({ [e.target.kommentar]: e.target.value})
 
   render() {
-    return() (
+    return (
       <form>
         <label>
           Skriv kommentar
