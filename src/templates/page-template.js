@@ -58,13 +58,13 @@ export default ({ data }) => (
 
 			base('Projekt').update([
 			  {
-				"id": "recTFZx3LLSpBcyD9",
+				{data.airtable.data.projekt},
 				"fields": {
 				  "Kommentar": "",
 				}
 			  },
 			  {
-				"id": "recFsQtq04Sc6WIiD",
+				{data.airtable.data.projekt},
 				"fields": {
 				  "Kommentar": "2019-10-01",
 				}
@@ -129,6 +129,11 @@ export const query = graphql`
 				Namn
 				Telefonnummer
 				Mailadress
+    			}
+  		}
+		Kommentar{
+			data{
+				Kommentarer
     			}
   		}
   	}
