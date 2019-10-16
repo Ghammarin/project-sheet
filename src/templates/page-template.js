@@ -43,9 +43,45 @@ export default ({ data }) => (
 				<p>{data.airtable.data.ANTECKNINGAR}</p>
 			</div>
 			
-		</section>
+		</section
+		
+		<form onsubmit="addComment()">
+		  Skriv kommentar: <input type="text">
+		  <input type="submit">
+		</form>
   </Layout>
+  
+  <script>
+		function addComment() {
+			var Airtable = require('airtable');
+			var base = new Airtable({apiKey: 'keyEmPlXlN7GLHT4d'}).base('appVntpV9Sejz9kjg');
+
+			base('Projekt').update([
+			  {
+				"id": "recTFZx3LLSpBcyD9",
+				"fields": {
+				  "Kommentar": "",
+				}
+			  },
+			  {
+				"id": "recFsQtq04Sc6WIiD",
+				"fields": {
+				  "Kommentar": "2019-10-01",
+				}
+			  }
+			], function(err, records) {
+			  if (err) {
+				console.error(err);
+				return;
+			  }
+			  records.forEach(function(record) {
+				console.log(record.get('id'));
+			  });
+			});
+		}
+	</script>
 )
+
 
 export const query = graphql`
   query GetPage($Path: String!) {
