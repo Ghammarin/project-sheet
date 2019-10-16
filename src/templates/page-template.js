@@ -59,9 +59,7 @@ export default ({ data }) => (
 			base('Projekt').update([
 			  {
 				{data.airtable.data.projekt},
-				"fields": {
-				  "Kommentar": "",
-				}
+				{data.airtable.data.Kommentar}
 			  },
 			  {
 				{data.airtable.data.projekt},
