@@ -51,8 +51,6 @@ export default ({ data }) => (
   </Layout>
   
  
-)
-
 class Contact extends React.component {
   constructor(props) {
     super(props)
@@ -87,6 +85,8 @@ class Contact extends React.component {
     )
   }
 }
+)
+
 export const query = graphql`
   query GetPage($Path: String!) {
     airtable(table: { eq: "Projekt" }, data: { PROJEKTNAMN: { eq: $Path } }) {
