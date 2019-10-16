@@ -45,7 +45,6 @@ export default ({ data }) => (
 			
 		</section>
 		
-		</form>
   </Layout>
   
  
