@@ -135,6 +135,7 @@ export const query = graphql`
 				Mailadress
     			}
   		}
+		Kommentar
   	}
  }
 }
