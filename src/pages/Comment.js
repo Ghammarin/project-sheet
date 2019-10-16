@@ -33,3 +33,4 @@ class Comment extends React.component {
     )
   }
 }
+export default CommentPage
