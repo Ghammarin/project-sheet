@@ -45,10 +45,7 @@ export default ({ data }) => (
 			
 		</section>
 		
-			<form onsubmit="addComment()">
-				Skriv kommentar: <input type="text">
-				<input type="submit">
-			</form>
+
 			
 			
 			
