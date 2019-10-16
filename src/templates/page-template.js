@@ -44,11 +44,6 @@ export default ({ data }) => (
 			</div>
 			
 		</section
-		
-		<form onsubmit="addComment()">
-		  Skriv kommentar: <input type="text">
-		  <input type="submit">
-		</form>
   </Layout>
   
   <script>
@@ -59,7 +54,7 @@ export default ({ data }) => (
 			base('Projekt').update([
 			  {
 				{data.airtable.data.projekt},
-				{data.airtable.data.Kommentar
+				{data.airtable.data.Kommentar}
 			  },
 			  {
 				{data.airtable.data.projekt},
