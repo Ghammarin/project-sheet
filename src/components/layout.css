@@ -24,16 +24,24 @@ main {
 	margin-left: 2%;
 }
 section{
-	display: block;
+	width: 100%;
+	display: inline-block;
 	float: left;
 	margin-left: 2%;
 }
 aside{
 	display: block;
 	float: right;
-	width: 35%;
+	width: 45%;
+	margin-left: 15%;
 }
-	
+comment{
+	display: block;
+	float: right;
+	width: 100%;
+	margin-left: 2%;
+}
+
 audio,
 canvas,
 progress,
