@@ -1,8 +1,20 @@
 import React from "react"
 import { Link, graphql } from "gatsby";
-//(import Airtable from "airtable";)
 
 import Layout from "../components/layout"
+
+const CommentPage = ({ data }) => (
+  <Layout>
+  <h3>Aktuella projekt</h3>
+  {data.allAirtable.edges.map((edge, i) => (
+    <p><Link to={edge.node.data.PROJEKTNAMN} key={i} >
+		{edge.node.data.projekt}
+	</Link></p>
+    )
+	)
+  }
+  </Layout>
+)
 
 class Comment extends React.component {
   constructor(props) {
