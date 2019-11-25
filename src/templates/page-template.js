@@ -46,9 +46,9 @@ export default ({ data }) => (
 			<h5>Anteckningar</h5>
 				<p>{data.airtable.data.ANTECKNINGAR}</p>
 			</div>
+		</comment>
 			
 
-		</section>
 
 			
 			
