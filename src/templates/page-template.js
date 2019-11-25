@@ -20,10 +20,7 @@ export default ({ data }) => (
 			</div> 
 		))}</div>
 		</aside>
-
-			<h5>Projektansvarig:</h5>
-			<div>{data.airtable.data.Projektansvarig[0]||[].data.Namn}</div>
-
+			<p>Projektansvarig: {data.airtable.data.Projektansvarig[0]||[].data.Namn}</p>
 			<h5>Personal bokad:</h5>
 				
 			<ul>{(data.airtable.data.Personalbokning||[]).map((rad, i) =>(
@@ -42,15 +39,16 @@ export default ({ data }) => (
 			<li key={i}>{data.airtable.data.Bokat[i].data.Kommentar}</li>
 			))}</ul>
 
-		</section>
-		<comment>
 			<div>
-			<h5>Prylar</h5>
-				<p>{data.airtable.data.PRYLAR}</p>
 			<h5>Anteckningar</h5>
 				<p>{data.airtable.data.ANTECKNINGAR}</p>
 			</div>
-		</comment>	
+			
+
+		</section>
+
+			
+			
 		
   </Layout>
   
@@ -63,7 +61,6 @@ export const query = graphql`
       data {
       		projekt
 		PROJEKTNAMN
-		PRYLAR
        		ANTECKNINGAR
 		Plats{
 			data{
