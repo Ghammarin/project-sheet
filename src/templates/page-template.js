@@ -21,6 +21,7 @@ export default ({ data }) => (
 		))}</div>
 		</aside>
 			<p>Projektansvarig: {data.airtable.data.Projektansvarig[0].data.Namn||[]}</p>
+
 			<h5>Personal bokad:</h5>
 				
 			<ul>{(data.airtable.data.Personalbokning||[]).map((rad, i) =>(
@@ -39,6 +40,8 @@ export default ({ data }) => (
 			<li key={i}>{data.airtable.data.Bokat[i].data.Kommentar}</li>
 			))}</ul>
 
+		</section>
+		<comment>
 			<div>
 			<h5>Anteckningar</h5>
 				<p>{data.airtable.data.ANTECKNINGAR}</p>
