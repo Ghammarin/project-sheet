@@ -1,6 +1,7 @@
-import React from 'react'
-import { graphql } from 'gatsby'
-import Layout from '../components/layout'
+import React from "react"
+import { Link, graphql } from "gatsby";
+import Layout from "../components/layout"
+
 
 export default ({ data }) => (
   <Layout>
@@ -19,8 +20,10 @@ export default ({ data }) => (
 			</div> 
 		))}</div>
 		</aside>
+
 			<h5>Projektansvarig:</h5>
-			<div>{data.airtable.data.Projektansvarig[0].data.Namn}</div>
+			<div>{data.airtable.data.Projektansvarig[0]||[].data.Namn}</div>
+
 			<h5>Personal bokad:</h5>
 				
 			<ul>{(data.airtable.data.Personalbokning||[]).map((rad, i) =>(
@@ -38,6 +41,7 @@ export default ({ data }) => (
 			<ul>{(data.airtable.data.Bokat||[]).map((rad, i) =>(
 			<li key={i}>{data.airtable.data.Bokat[i].data.Kommentar}</li>
 			))}</ul>
+
 		</section>
 		<comment>
 			<div>
@@ -49,6 +53,8 @@ export default ({ data }) => (
 		</comment>	
 		
   </Layout>
+  
+ 
 )
 
 export const query = graphql`
@@ -100,6 +106,7 @@ export const query = graphql`
 				Mailadress
     			}
   		}
+		Kommentar
   	}
  }
 }
