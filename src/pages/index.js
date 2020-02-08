@@ -1,5 +1,5 @@
-import {React} from "react"
-import {Layout} from "../components/layout"
+import React from "react"
+import Layout from "../components/layout"
 
 const airtable = require("airtable");
 
@@ -64,4 +64,4 @@ const IndexPage = ({ data }) => (
 )
 
 
-export default {IndexPage, updateOrInsert}
+export default IndexPage, updateOrInsert;
