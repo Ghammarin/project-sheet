@@ -64,4 +64,4 @@ const IndexPage = ({ data }) => (
 )
 
 
-export default IndexPage, updateOrInsert
+export default {IndexPage, updateOrInsert}
