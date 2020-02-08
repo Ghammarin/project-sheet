@@ -1,3 +1,6 @@
+import React from "react"
+
+import Layout from "../components/layout"
 
 
 const airtable = require("airtable");
@@ -19,3 +22,13 @@ base("inventarieflik").create({ produkt: "Gabriella", test: "Hejhejhej" }, funct
   }
   console.log(record.getId());
 });
+
+
+const IndexPage =  (
+  <Layout>
+  <h3>Aktuella projekt</h3>
+  </Layout>
+)
+
+
+export default IndexPage
