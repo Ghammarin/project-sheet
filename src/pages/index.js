@@ -24,7 +24,7 @@ base("inventarieflik").create({ produkt: "Gabriella", test: "Hejhejhej" }, funct
 });
 
 
-const IndexPage =  = ({ data }) => (
+const IndexPage = ({ data }) => (
   <Layout>
   <h3>Aktuella projekt</h3>
   </Layout>
