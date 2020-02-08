@@ -11,7 +11,7 @@ airtable.configure({
 const base = airtable.base("appE7YBE4hzd7Ew1v");
 
 const create = record => {
-  base("lowerFunnel").create(record, function(err, record) {
+  base("lowerFunnel").create({ Name: "Gabriella", test: "test notes" }, function(err, record) {
     if (err) {
       console.error(err);
       return;
