@@ -56,9 +56,6 @@ const updateOrInsert = record => {
     });
 };
 
-export = {
-  updateOrInsert,
-};
 
 
 const IndexPage = ({ data }) => (
