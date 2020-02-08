@@ -1,39 +1,19 @@
-import React from "react"
-import { Link, graphql } from "gatsby";
-//(import Airtable from "airtable";)
+const airtable = require("airtable");
 
-import Layout from "../components/layout"
+airtable.configure({
+  endpointUrl: "https://api.airtable.com",
+  apiKey: "keyEmPlXlN7GLHT4d"
+});
 
-const IndexPage = ({ data }) => (
-  <Layout>
-  <h3>Aktuella projekt</h3>
-  {data.allAirtable.edges.map((edge, i) => (
-    <p><Link to={edge.node.data.PROJEKTNAMN} key={i} >
-		{edge.node.data.projekt}
-	</Link></p>
-    )
-	)
+const base = airtable.base("appE7YBE4hzd7Ew1v");
+
+base("inventarieflik").create({ produkt: "Gabriella", test: "Hejhejhej" }, function(
+  err,
+  record
+) {
+  if (err) {
+    console.error(err);
+    return;
   }
-  </Layout>
-)
-
-
-// query airtable for the Title and Path of each record,
-// filtering for only records in the Sections table.
-export const query = graphql`
-  {
-    allAirtable(filter: { table: { eq: "Projekt"}} sort:{fields: [data___STARTDATUM], order:ASC} ) {
-      edges {
-        node {
-          data {
-            projekt
-			PROJEKTNAMN
-          }
-        }
-      }
-    }
-  }
-`
-
-
-export default IndexPage
+  console.log(record.getId());
+});
