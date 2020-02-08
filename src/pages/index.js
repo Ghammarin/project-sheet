@@ -29,7 +29,7 @@ document.getElementById("demo").innerHTML = "YOU CLICKED ME!";
 const IndexPage = ({ data }) => (
   <Layout>
   <h3>Aktuella projekt</h3>
-  <button id="demo" onclick="console.log(test14)">Click me</button>
+  <button id="demo" onclick="console.log('test14')">Click me</button>
   </Layout>
 )
 
