@@ -9,6 +9,25 @@ airtable.configure({
 });
 
 const base = airtable.base("appE7YBE4hzd7Ew1v");
+const create = record => {
+  base("lowerFunnel").create(record, function(err, record) {
+    if (err) {
+      console.error(err);
+      return;
+    }
+    console.log(record.getId());
+  });
+};
+
+const replace = (id, record) => {
+  base("lowerFunnel").replace(id, record, function(err, record) {
+    if (err) {
+      console.error(err);
+      return;
+    }
+    console.log(record.get("experimentVariation"));
+  });
+};
 
 const updateOrInsert = record => {
   const primaryField = record.experimentVariation;
