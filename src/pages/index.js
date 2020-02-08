@@ -21,6 +21,7 @@ function updateRecord() {
   }
   console.log(record.getId());
 });
+document.getElementById("demo").innerHTML = "YOU CLICKED ME!";
 }
 
 
