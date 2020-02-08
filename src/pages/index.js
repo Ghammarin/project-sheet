@@ -10,7 +10,7 @@ airtable.configure({
 
 const base = airtable.base("appE7YBE4hzd7Ew1v");
 
-function updateRecord() {
+function updateRecord(base) {
   base("inventarieflik").create({ produkt: "Gabriella", test: "Hejhejhej" }, function(
   err,
   record
