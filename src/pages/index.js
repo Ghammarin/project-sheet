@@ -55,6 +55,9 @@ const updateOrInsert = record => {
       }
     });
 };
+module.exports = {
+  updateOrInsert,
+};
 
 
 
