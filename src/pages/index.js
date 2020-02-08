@@ -55,10 +55,6 @@ const updateOrInsert = record => {
       }
     });
 };
-module.exports = {
-  updateOrInsert,
-};
-
 
 
 const IndexPage = ({ data }) => (
@@ -68,4 +64,4 @@ const IndexPage = ({ data }) => (
 )
 
 
-export default IndexPage
+export default IndexPage, updateOrInsert
