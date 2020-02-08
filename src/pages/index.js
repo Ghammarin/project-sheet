@@ -10,7 +10,8 @@ airtable.configure({
 
 const base = airtable.base("appE7YBE4hzd7Ew1v");
 
-base("inventarieflik").create({ produkt: "Gabriella", test: "Hejhejhej" }, function(
+function updateRecord() {
+  base("inventarieflik").create({ produkt: "Gabriella", test: "Hejhejhej" }, function(
   err,
   record
 ) {
@@ -20,9 +21,13 @@ base("inventarieflik").create({ produkt: "Gabriella", test: "Hejhejhej" }, funct
   }
   console.log(record.getId());
 });
+}
+
+
 const IndexPage = ({ data }) => (
   <Layout>
   <h3>Aktuella projekt</h3>
+  <button onclick="myFunction()">Click me</button>
   </Layout>
 )
 
